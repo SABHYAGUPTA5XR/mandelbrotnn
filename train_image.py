@@ -99,11 +99,11 @@ if __name__ == '__main__':
     model = models.SkipConn(hidden_size=300, num_hidden_layers=15, activation=nn.GELU).cuda()
     # model = models.Fourier(16, hidden_size=200, num_hidden_layers=10, linmap=models.CenteredLinearMap(-1, 1, -1, 1, 2*torch.pi, 2*torch.pi)).cuda()
     trainImage(
-        image_path='DatasetImages/biodiversity.png',
-        proj_name='biodiversity_adam',
+        image_path='DatasetImages/chicago.jpg',
+        proj_name='chicago_adam',
         model=model,
         lr=0.002,
-        batch_size=8000,
+        batch_size=5000,
         num_epochs=100,
         optimizer='adam',
         scheduler_step=10,
